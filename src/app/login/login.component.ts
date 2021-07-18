@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
     this.authenticate()
 
   }
+  // this is a sync call, wait for authenticate to succeed and jwt token
+  // is stored into local storage before invoking any other rest apis
   async authenticate() {
     await this.authService.authenticateUser(this.loginForm.value).then(
       (data) => {
