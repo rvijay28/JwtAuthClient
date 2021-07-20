@@ -13,7 +13,6 @@ export class HelloComponent implements OnInit {
   constructor(private helloService: HelloService, private router: Router) { }
 
   ngOnInit(): void {
-    console.log("Inside hellocomponent ngOnInit");
     this.helloService.sayHello().subscribe(data => {
       this.message = data;
     }, error => {

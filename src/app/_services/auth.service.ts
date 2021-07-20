@@ -6,7 +6,9 @@ import { User } from '../model/User';
 
 const API_URL = "http://localhost:8080/authenticate";
 const httpOptions = {
-  headers: new HttpHeaders().set('Content-Type','application/json')
+  headers: new HttpHeaders()
+    .set('Content-Type','application/json')
+    .set('skip-interceptor','true')
 };
 
 @Injectable({
